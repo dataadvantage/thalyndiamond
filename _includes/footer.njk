@@ -1,0 +1,17 @@
+<footer class="shadow bg-primary-800 text-white py-12">
+    <div class="default-container px-6">
+
+        <p class="mb-4 text-2xl">CDCC</p>
+
+        <div class="mb-6">
+            <a href="{{ contacts.facebook }}" class="inline-block pr-4" aria-label="Facebook">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+        </div>
+        <div class="flex flex-col md:flex-row">
+            {% for item in collections.all | eleventyNavigation %}
+                <a href="{{ item.url }}" class="inline-flex items-center pr-6 font-light text-white hover:text-secondary-600 transition">{{ item.key | upper }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

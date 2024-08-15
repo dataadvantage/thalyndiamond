@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.default-container {
+	@apply max-w-4xl mx-auto;
+}
+
+.stretched-link::after {
+	content: "";
+	@apply z-10 absolute inset-0 bg-transparent pointer-events-auto;
+}
+
+@layer base {
+	h1 {
+		@apply text-4xl font-semibold;
+	}
+
+	h2 {
+		@apply text-3xl font-semibold;
+	}
+
+	h3 {
+		@apply text-2xl font-semibold;
+	}
+
+	h4 {
+		@apply text-xl font-semibold;
+	}
+}
+
+@layer components {
+	.btn-primary-sm {
+		@apply bg-primary-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 transition;
+	}
+	.btn-primary {
+		@apply bg-primary-800 px-4 py-3 font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 transition;
+	}
+	.btn-primary-lg {
+		@apply bg-primary-800 px-6 py-4 text-lg font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 transition;
+	}
+	.btn-primary-xl {
+		@apply bg-primary-800 px-8 py-5 text-xl font-semibold text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 transition;
+	}
+}

@@ -1,0 +1,142 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 3
+---
+
+<div class="min-h-[600px] flex items-center relative">
+  <div class="grid md:grid-cols-2 max-w-4xl mx-auto">
+    {% image "static/img/banner-logo.png", "Banner image" %}
+  </div>
+  <div class="absolute inset-0 -z-10 [&_img]:w-full [&_img]:object-cover [&_picture]:absolute [&_picture]:bottom-0">
+    {% image "static/img/large-banner.png", "Thalyn background image", "1440px" %}
+  </div>
+</div>
+<div class="bg-primary">
+  <div class="default-container">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="[&_img]:object-cover [&_img]:h-full">
+        {% image "static/img/store-black-and-white.png", "Storefront", "600px" %}
+      </div>
+      <div class="p-10 py-10">
+        {% image "static/img/lab-grown-diamond.png", "Lab grown diamon" %}
+        <p class="text-white font-prompt font-extralight mb-4">
+          <span class="font-normal">Lab-Grown Diamond</span>
+          คือ
+          <span class="font-normal">“เพชรแท้”</span>
+          ที่มีคุณสมบัติทาง กายภาพ และการเล่นของแสงเช่นเดียวกับ “เพชรธรรมชาติ”
+                    โดยไม่สามารถแยกออกได้ด้วยตาเปล่า</p>
+        <p class="text-white font-prompt font-extralight">
+          เพชร Lab Grown นี้
+          <span class="font-normal">“มนุษย์”</span>
+          เป็นผู้สร้างขึ้น โดยจำลองการ เกิดเพชรแบบธรรมชาติ ซึ่งเพชร Lab Grown มีองค์ประกอบ
+          ทางเคมีและคุณสมบัติเหมือนกับเพชรที่เกิดขึ้นจากธรรมชาติทุก ประการ ต่างกันเพียงเรื่องแหล่งกำเนิด</p>
+      </div>
+      <div class="flex items-center lg:py-12">
+        {% image "static/img/hand-on-chest.png", "Hand with diamond", "400px" %}
+      </div>
+    </div>
+  </div>
+  <div class="bg-parchment px-6">
+    <div class="default-container py-16">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {% image "static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %}
+        {% for product in collections.products|head(7) %}
+          <div>
+            {% image eleventy.env.root + product.data.thumbnail, product.data.name, "400px" %}
+            <h4 class="mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
+            <p class="font-fahkwang text-primary mb-2 md:mb-4">{{ product.data.description }}</p>
+            <p class="font-fahkwang text-sm font-semibold text-primary">{{ product.data.price }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="bg-primary">
+    <div class="default-container">
+      <div class="grid md:grid-cols-3">
+        <div class="bg-[url('/assets/images/home/focus-hand.png')] py-24 px-14 md:px-6 lg:px-10 bg-center bg-cover">
+          <img src="/assets/images/home/thalyn-lab-grown-diamon.png" alt="" class="mx-auto"></div>
+          <div class="bg-[url('/assets/images/home/store-black-and-white-2.png')] pt-36 px-8 lg:px-24 flex items-end pb-12 bg-top
+              bg-cover md:col-span-2">
+            <p class="text-white font-prompt font-extralight">
+              <span class="font-medium">Thalyn Diamond</span>
+              ประสบการณ์เกือบ 50 ปี ส่งต่อจากรุ่นสู่รุ่น โดยเริ่มจากความเชี่ยวชาญของคุณพ่อ ที่เป็นช่างคัดเพชร ช่างทอง
+              ด้วยพฤติกรรมของคนยุคใหม่ที่เปลี่ยนไป จึงได้ทำการ
+              <span class="font-medium">"Rebranding"</span>
+              ร้านเพชรให้เข้าถึงง่าย ทุกคนเข้าถึงเพชรเม็ดใหญ่ คุณภาพดี ในราคาจับต้องได้  จึงเป็นที่มาของ
+              <span class="font-medium">"Thalyn Diamond" เพชรแท้ LabGrown
+              </span>
+              เจ้าแรก เจ้าเดียวในเชียงใหม่ ใหญ่ที่สุดในภาคเหนือ และเรายังมีสาขาที่ กรุงเทพ
+                                          อีกด้วย
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-parchment">
+      <div class="default-container py-20">
+        <div class="grid md:grid-cols-2">
+          <div class="mb-6">
+            <div class="flex justify-center mb-6">
+              {% image "static/img/gia-01.png", "GIA certified diamonds", "180px" %}
+            </div>
+            <h3 class="font-fahkwang text-center text-primary font-medium text-xl mb-2">
+              GIA (Gemological Institute of America)
+            </h3>
+            <p class="font-prompt text-primary text-center px-10 lg:px-20">
+              สถาบันอัญมณีศาสตร์ของอเมริกา มีชื่อเสียงมาก ทั่วโลกให้การยอมรับ เป็นผู้กำหนดมาตรฐานของเพชร รายแรก ๆ ของโลก
+            </p>
+          </div>
+          <div>
+            <div class="flex justify-center">
+              {% image "static/img/gia-02.png", "I.G.I. certified diamonds", "250px" %}
+            </div>
+            <h3 class="font-fahkwang text-center text-primary font-medium text-xl mb-2">
+              IGI (International Gemological Institute)
+            </h3>
+            <p class="font-prompt text-primary text-center px-10 lg:px-20">
+              สถาบันตรวจสอบเพชร ที่มีสาขากระจายอยู่ทั่วโลก มีห้องแล็บสำหรับการวิจัย เพื่อตรวจสอบเพชรและอัญมณีต่าง ๆ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-xs">
+      <div class="default-container py-8 px-8">
+        <div class="grid grid-cols-4 gap-6">
+          <div class="col-span-2 md:col-span-1">
+            {% image 'static/img/banner-logo.png', "Thalyn Diamond brand logo" %}
+          </div>
+          <div class="md:hidden"></div>
+          <div class="text-white font-fahkwang font-extralight col-span-4 md:col-span-2 lg:col-span-1">
+            <h3 class="text-lg font-medium mb-4">Contact us</h3>
+            <p>
+              Call: (+66) 099 639 6445<br/> Email: email@email.com<br/> <br/> Address: <br/>Wasabi Park 2nd floor, Mahidol Road,
+              Chiang Mai
+            </p>
+          </div>
+          <div class="text-white font-fahkwang font-extralight col-span-4 md:col-span-1">
+            <h3 class="text-lg font-medium mb-4">Follow us</h3>
+            <div class="flex gap-4">
+              <a href="https://www.instagram.com/thalyndiamond/">
+                <i class="fab fa-instagram fa-2x"></i>
+              </a>
+              <a href="https://tiktok.com/@thalyndiamond.th">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" class="h-6 text-white fill-white">
+                  <!-- !Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free
+                  Copyright 2024 Fonticons, Inc. -->
+                  <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88
+                    0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+              </a>
+              <a href="https://maps.app.goo.gl/d2TxMNfXejHmBUBB7">
+                <i class="fas fa-map fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
