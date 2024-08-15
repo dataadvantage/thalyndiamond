@@ -1784,6 +1784,20 @@ h4{
      object-fit: cover;
 }
 
+@media (min-width: 768px){
+  .\[\&_img\]\:md\:h-auto img{
+    height: auto;
+  }
+
+  .md\:\[\&_img\]\:w-full img{
+    width: 100%;
+  }
+
+  .\[\&_img\]\:md\:w-full img{
+    width: 100%;
+  }
+}
+
 .\[\&_picture\]\:absolute picture{
   position: absolute;
 }
@@ -1802,4 +1816,18 @@ h4{
 
 .\[\&_picture\]\:-bottom-\[100px\] picture{
   bottom: -100px;
+}
+
+.\[\&_picture\]\:h-full picture{
+  height: 100%;
+}
+
+.\[\&_picture\]\:min-h-full picture{
+  min-height: 100%;
+}
+
+@media (min-width: 768px){
+  .\[\&_picture\]\:md\:-bottom-\[100px\] picture{
+    bottom: -100px;
+  }
 }
