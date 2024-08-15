@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 .default-container {
-	@apply max-w-4xl mx-auto;
+	@apply max-w-6xl mx-auto;
 }
 
 .stretched-link::after {
