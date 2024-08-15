@@ -35,7 +35,7 @@ numberOfLatestPostsToShow: 3
           เป็นผู้สร้างขึ้น โดยจำลองการ เกิดเพชรแบบธรรมชาติ ซึ่งเพชร Lab Grown มีองค์ประกอบ
           ทางเคมีและคุณสมบัติเหมือนกับเพชรที่เกิดขึ้นจากธรรมชาติทุก ประการ ต่างกันเพียงเรื่องแหล่งกำเนิด</p>
       </div>
-      <div class="flex items-center lg:py-12">
+      <div class="flex items-center lg:py-12 [&_img]:w-full md:hidden lg:block">
         {% image "static/img/hand-on-chest.png", "Hand with diamond", "400px" %}
       </div>
     </div>
@@ -58,7 +58,7 @@ numberOfLatestPostsToShow: 3
   <div class="bg-primary">
     <div class="default-container">
       <div class="grid md:grid-cols-3">
-        <div class="bg-center bg-cover relative">
+        <div class="bg-center bg-cover relative [&>picture>img]:object-cover [&>picture>img]:h-full">
           {% image 'static/img/focus-hand.png', "Ring on the hand", "600px" %}
           <div class="absolute inset-0 py-24 px-14 md:px-6 lg:px-10">
             {% image 'static/img/thalyn-lab-grown-diamon.png', 'Thalyn diamond brand logo', "600px" %}
@@ -74,9 +74,9 @@ numberOfLatestPostsToShow: 3
             <span class="font-medium">"Thalyn Diamond" เพชรแท้ LabGrown
             </span>
             เจ้าแรก เจ้าเดียวในเชียงใหม่ ใหญ่ที่สุดในภาคเหนือ และเรายังมีสาขาที่ กรุงเทพ
-                        อีกด้วย
+                                    อีกด้วย
           </p>
-          <div class="absolute inset-0">
+          <div class="absolute inset-0 [&_img]:h-full [&_img]:object-cover [&_img]:object-top">
             {% image 'static/img/store-black-and-white-2.png', "Thalyn Diamond storefront", "1000px" %}
           </div>
         </div>
