@@ -1214,10 +1214,6 @@ h4 {
   height: 1.5rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -1687,10 +1683,6 @@ h4 {
   .sm\:hidden {
     display: none;
   }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (min-width: 768px) {
@@ -1767,15 +1759,6 @@ h4 {
   }
 }
 
-.\[\&\>img\]\:h-full>img {
-  height: 100%;
-}
-
-.\[\&\>img\]\:object-cover>img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .\[\&\>picture\>img\]\:h-full>picture>img {
   height: 100%;
 }
@@ -1797,18 +1780,9 @@ h4 {
   width: 100%;
 }
 
-.\[\&_img\]\:min-w-full img {
-  min-width: 100%;
-}
-
 .\[\&_img\]\:object-cover img {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.\[\&_img\]\:object-bottom img {
-  -o-object-position: bottom;
-     object-position: bottom;
 }
 
 .\[\&_img\]\:object-top img {
