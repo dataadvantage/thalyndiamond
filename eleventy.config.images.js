@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
 	// https://www.11ty.dev/docs/plugins/image/
 	eleventyConfig.addAsyncShortcode(
 		"image",
-		async function imageShortcode(src, alt, widths, sizes) {
+		async function imageShortcode(src, alt, widths, sizes, lazy = true) {
 			// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
 			// Warning: Avif can be resource-intensive so take care!
 			let formats = [
@@ -63,7 +63,11 @@ module.exports = function (eleventyConfig) {
 				decoding: "async",
 			};
 
-			return eleventyImage.generateHTML(metadata, imageAttributes);
+			const pictureTag = eleventyImage.generateHTML(metadata, imageAttributes);
+			if (!lazy) {
+				return pictureTag.replace('loading="lazy"', "");
+			}
+			return pictureTag;
 		}
 	);
 };

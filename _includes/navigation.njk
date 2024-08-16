@@ -1,8 +1,8 @@
 <nav class="bg-primary shadow font-fahkwang font-extralight" x-data="{open: false}">
   <div class="default-container px-4">
     <div class="flex justify-between items-center">
-      <a href="/" class="-ml-4">
-        {% image eleventy.env.root + "/public/img/logo.png", "Thalyn Diamond Brand Logo", "150px, 220px", "(max-width: 640px) 150px, 220px" %}
+      <a href="/" class="-ml-4 max-w-[220px]">
+        {% image eleventy.env.root + "/public/img/logo.png", "Thalyn Diamond Brand Logo", "400px", "(max-width: 640px) 150px, 220px", false %}
       </a>
       <div class="hidden sm:ml-6 sm:flex">
         {% for item in collections.all | eleventyNavigation %}
