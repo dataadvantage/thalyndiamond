@@ -27,7 +27,7 @@ layout: layouts/base.njk
     <div
         class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {# {% image eleventy.env.root + "/src/static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %} #}
-        {% for product in collections.products|head(3) %}
+        {% for product in collections.products|shuffle|head(3) %}
             {% if product.data.name != name %}
                 <div class="group relative [&_img]:hover:scale-125 [&_img]:duration-500 overflow-hidden [&_*]:transition">
                     <div class="overflow-hidden">

@@ -10,6 +10,13 @@ module.exports = function (eleventyConfig) {
 		return [...new Set(array)];
 	});
 
+	eleventyConfig.addFilter("shuffle", (array) => {
+		return array
+			.map((value) => ({ value, sort: Math.random() }))
+			.sort((a, b) => a.sort - b.sort)
+			.map(({ value }) => value);
+	});
+
 	eleventyConfig.addFilter("sort", (array, key, ascending = true) => {
 		if (ascending) {
 			return array.sort((a, b) => {
