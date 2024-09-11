@@ -2242,6 +2242,11 @@ h4 {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .\[\&\>picture\>img\]\:h-full>picture>img {
