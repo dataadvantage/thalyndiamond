@@ -2191,6 +2191,11 @@ h4 {
     padding-top: 12rem;
     padding-bottom: 12rem;
   }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .\[\&\>picture\>img\]\:h-full>picture>img {

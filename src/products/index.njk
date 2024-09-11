@@ -13,7 +13,7 @@ eleventyNavigation:
     <div class="h-[400px] md:h-[600px] [&_picture]:min-h-full [&_img]:h-full [&_img]:md:w-full [&_img]:object-cover">
         {% image eleventy.env.root + '/src/static/img/large-front-view-1.jpg', 'Thalyn Diamond storefront', '2000px', undefined, false %}
     </div>
-    <div class="default-container py-24">
+    <div class="default-container py-24 px-6 lg:px-0">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {% image eleventy.env.root + "/src/static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %}
             {% for product in collections.products %}
