@@ -28,7 +28,7 @@ numberOfLatestPostsToShow: 3
           คือ
           <span class="font-normal">“เพชรแท้”</span>
           ที่มีคุณสมบัติทาง กายภาพ และการเล่นของแสงเช่นเดียวกับ “เพชรธรรมชาติ”
-                    โดยไม่สามารถแยกออกได้ด้วยตาเปล่า</p>
+          โดยไม่สามารถแยกออกได้ด้วยตาเปล่า</p>
         <p class="text-white font-prompt font-extralight">
           เพชร Lab Grown นี้
           <span class="font-normal">“มนุษย์”</span>
@@ -51,7 +51,7 @@ numberOfLatestPostsToShow: 3
             {% image eleventy.env.root + product.data.thumbnail, product.data.name, "600px" %}
           </div>
           <h4 class="group-hover:underline mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
-          <p class="font-fahkwang text-primary mb-2 md:mb-4">{{ product.data.description }}</p>
+          <p class="font-fahkwang text-gray-600 mb-2 md:mb-4">{{ product.data.description }}</p>
           <a href="{{ product.url }}" class="font-fahkwang text-gray-600 group-hover:underline stretched-link"></a>
         </div>
       {% endfor %}
@@ -82,7 +82,7 @@ numberOfLatestPostsToShow: 3
           <span class="font-medium">"Thalyn Diamond" เพชรแท้ LabGrown
           </span>
           เจ้าแรก เจ้าเดียวในเชียงใหม่ ใหญ่ที่สุดในภาคเหนือ และเรายังมีสาขาที่ กรุงเทพ
-                              อีกด้วย
+                    อีกด้วย
         </p>
         <div class="absolute inset-0 [&_img]:h-full [&_img]:object-cover [&_img]:object-top">
           {% image 'static/img/store-black-and-white-2.png', "Thalyn Diamond storefront", "1000px" %}
@@ -93,69 +93,75 @@ numberOfLatestPostsToShow: 3
 </div>
 <div class="bg-white py-20 px-6 relative">
   <div class="default-container">
-    <h2 class="text-lg font-prompt font-normal">เครื่องประดับที่คุณไว้ใจ</h2>
-    <p class="font-prompt font-semibold text-primary mb-8 text-4xl">รีวิวจากลูกค้าของเรา</p>
+    <h2 class="text-base font-prompt font-light">เครื่องประดับที่คุณไว้ใจ</h2>
+    <p class="font-prompt text-primary mb-8 text-4xl">รีวิวจากลูกค้าของเรา</p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 mb-12 gap-6">
-      <div class="shadow bg-gray-100 p-6 relative z-50">
-        <div class="flex items-center [&_m]:rounded-full mb-6">
-          {% image './static/img/vathinee.png', 'Customer image', '40px' %}
-          <div class="ml-4">
-            <p class="font-bold">Vathinee B.</p>
-            <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
+      <div class="relative z-50">
+        <div class="bg-gray-100 shadow p-6">
+          <div class="flex items-center [&_m]:rounded-full mb-6">
+            {% image './static/img/vathinee.png', 'Customer image', '40px' %}
+            <div class="ml-4">
+              <p class="font-bold">Vathinee B.</p>
+              <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
+            </div>
           </div>
-        </div>
-        <p class="text-sm mb-6 text-gray-600">
-          We had the most wonderful experience with Thalyn Diamond for our wedding rings. The service provided by the owners was
-          exceptional—they were incredibly kind and professional throughout the entire process. They truly understood our vision
-          and delivered rings that were absolutely beautiful and exactly what we wanted. The quality of the craftsmanship is
-          outstanding, and the price was unbeatable.
-        </p>
-        <div>
-          {% for i in range(5) %}
-            <i class="fas fa-star text-yellow-400"></i>
-          {% endfor %}
+          <p class="text-sm mb-6 text-gray-600">
+            We had the most wonderful experience with Thalyn Diamond for our wedding rings. The service provided by the owners was
+            exceptional—they were incredibly kind and professional throughout the entire process. They truly understood our vision
+            and delivered rings that were absolutely beautiful and exactly what we wanted. The quality of the craftsmanship is
+            outstanding, and the price was unbeatable.
+          </p>
+          <div>
+            {% for i in range(5) %}
+              <i class="fas fa-star text-yellow-400"></i>
+            {% endfor %}
+          </div>
         </div>
       </div>
-      <div class="shadow bg-gray-100 p-6 relative z-50">
-        <div class="flex items-center [&_m]:rounded-full mb-6">
-          {% image './static/img/nattaporn.png', 'Customer image', '40px' %}
-          <div class="ml-4">
-            <p class="font-bold">Nattaporn S.</p>
-            <p class="text-sm text-gray-500">ลูกค้างานเครื่องประดับ</p>
+      <div class="relative z-50">
+        <div class="shadow bg-gray-100 p-6">
+          <div class="flex items-center [&_m]:rounded-full mb-6">
+            {% image './static/img/nattaporn.png', 'Customer image', '40px' %}
+            <div class="ml-4">
+              <p class="font-bold">Nattaporn S.</p>
+              <p class="text-sm text-gray-500">ลูกค้างานเครื่องประดับ</p>
+            </div>
           </div>
-        </div>
-        <p class="text-sm mb-6 text-gray-600 font-prompt">
-          ร้านนี้มีคนแนะนำมา ตอนแรกยังลังเลเพราะเห็นเพิ่งเปิด แอบกลัว 555 แต่ราคาเค้าน่ารักมาก
-          บวกกับกำลังหาแหวนที่ใส่ทุกวันแทนแหวนแต่งงานแบบไม่ต้องกังวลในการดูแลรักษามากนัก ก็เลยลองสั่งมาดู ผลคือ เพชรสวยมาก
-          คุณภาพเกินราคา ตัวแหวนก็แข็งแรงสวยงาม สำคัญคือเจ้าของร้านบริการเองเลย ไม่ว่าจะให้คำแนะนำ หาแบบที่เข้ากับเรา
-          แม้แต่เราบอกว่าอยู่กรุงเทพนะไม่สะดวกขึ้นไปเชียงใหม่ ก็คือส่งมาได้ไม่มีปัญหาใดๆ แถมรอไม่นาน after sevice ก็ปัง
-          ตอนหลังคือเข้าคอร์สลดนน. แหวนหลวม ส่งกลับไปแก้ไซส์ โชคดีเค้าเปิดเพิ่มหลายสาขามาก มีหน้าร้านที่กรุงเทพแล้ว
-          ไม่ต้องส่งไปถึงเชียงใหม่ เจ้าของร้านก็คือ จัดการให้เร็วมาก
-          เป็นร้านที่ประทับใจตั้งกะเริ่มซื้อจนซื้อจบไปหลายเดือนก็ยังประทับใจอยู่ แนะนำเลยค่ะ💘🪻🌼
-        </p>
-        <div>
-          {% for i in range(5) %}
-            <i class="fas fa-star text-yellow-400"></i>
-          {% endfor %}
+          <p class="text-sm mb-6 text-gray-600 font-prompt">
+            ร้านนี้มีคนแนะนำมา ตอนแรกยังลังเลเพราะเห็นเพิ่งเปิด แอบกลัว 555 แต่ราคาเค้าน่ารักมาก
+            บวกกับกำลังหาแหวนที่ใส่ทุกวันแทนแหวนแต่งงานแบบไม่ต้องกังวลในการดูแลรักษามากนัก ก็เลยลองสั่งมาดู ผลคือ เพชรสวยมาก
+            คุณภาพเกินราคา ตัวแหวนก็แข็งแรงสวยงาม สำคัญคือเจ้าของร้านบริการเองเลย ไม่ว่าจะให้คำแนะนำ หาแบบที่เข้ากับเรา
+            แม้แต่เราบอกว่าอยู่กรุงเทพนะไม่สะดวกขึ้นไปเชียงใหม่ ก็คือส่งมาได้ไม่มีปัญหาใดๆ แถมรอไม่นาน after sevice ก็ปัง
+            ตอนหลังคือเข้าคอร์สลดนน. แหวนหลวม ส่งกลับไปแก้ไซส์ โชคดีเค้าเปิดเพิ่มหลายสาขามาก มีหน้าร้านที่กรุงเทพแล้ว
+            ไม่ต้องส่งไปถึงเชียงใหม่ เจ้าของร้านก็คือ จัดการให้เร็วมาก
+            เป็นร้านที่ประทับใจตั้งกะเริ่มซื้อจนซื้อจบไปหลายเดือนก็ยังประทับใจอยู่ แนะนำเลยค่ะ💘🪻🌼
+          </p>
+          <div>
+            {% for i in range(5) %}
+              <i class="fas fa-star text-yellow-400"></i>
+            {% endfor %}
+          </div>
         </div>
       </div>
-      <div class="shadow bg-gray-100 p-6 relative z-50">
-        <div class="flex items-center [&_m]:rounded-full mb-6">
-          {% image './static/img/josh.png', 'Customer image', '40px' %}
-          <div class="ml-4">
-            <p class="font-bold">Josh B.</p>
-            <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
+      <div class="relative z-50">
+        <div class="shadow bg-gray-100 p-6 ">
+          <div class="flex items-center [&_m]:rounded-full mb-6">
+            {% image './static/img/josh.png', 'Customer image', '40px' %}
+            <div class="ml-4">
+              <p class="font-bold">Josh B.</p>
+              <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
+            </div>
           </div>
-        </div>
-        <p class="text-sm mb-6 text-gray-600">
-          My wife and I had an exceptional experience with Thalyn Diamond in Chiang Mai. From start to finish, their service was
-          impeccable. We wanted custom-made wedding rings, and they exceeded our expectations in every way. The craftsmanship is
-          stunning, and the rings were exactly how we envisioned them.
-        </p>
-        <div>
-          {% for i in range(5) %}
-            <i class="fas fa-star text-yellow-400"></i>
-          {% endfor %}
+          <p class="text-sm mb-6 text-gray-600">
+            My wife and I had an exceptional experience with Thalyn Diamond in Chiang Mai. From start to finish, their service was
+            impeccable. We wanted custom-made wedding rings, and they exceeded our expectations in every way. The craftsmanship is
+            stunning, and the rings were exactly how we envisioned them.
+          </p>
+          <div>
+            {% for i in range(5) %}
+              <i class="fas fa-star text-yellow-400"></i>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

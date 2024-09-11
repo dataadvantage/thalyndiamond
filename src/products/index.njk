@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Our Products - Thalyn Diamond
+title: สินค้าจากสตูดิโอ - Thalyn Diamond
 description: สินค้าเครื่องประดับที่สวยงามและมีคุณภาพ เพชรแท้จากแล็บ เจ้าแรกของเชียงใหม่
 permalink: '/products/'
 override:tags: []
@@ -22,7 +22,7 @@ eleventyNavigation:
                         {% image eleventy.env.root + product.data.thumbnail, product.data.name, "600px" %}
                     </div>
                     <h4 class="group-hover:underline mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
-                    <p class="font-fahkwang text-primary mb-2 md:mb-4">{{ product.data.description }}</p>
+                    <p class="font-fahkwang text-gray-600 mb-2 md:mb-4">{{ product.data.description }}</p>
                     <a href="{{ product.url }}" class="font-fahkwang text-gray-600 group-hover:underline stretched-link"></a>
                 </div>
             {% endfor %}
