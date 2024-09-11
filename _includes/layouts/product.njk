@@ -12,4 +12,32 @@ layout: layouts/base.njk
     <div class="max-w-full overflow-x-hidden [&_iframe]:max-w-full text-neutral-800 prose">
         {{ content|safe }}
     </div>
+    <div class="default-container grid grid-cols-1 md:grid-cols-2 gap-6 auto-cols-auto">
+        {% for image in images %}
+            {% set imageDetails = (eleventy.env.root + image) | imageSize %}
+            {% set isPortrait = imageDetails.height > imageDetails.width %}
+            <div class="{% if isPortrait %}row-span-2{% endif %} relative flex items-stretch [&_img]:h-full [&_img]:object-cover">
+                {% image eleventy.env.root + image, 'product image', "600px" %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="default-container py-12 px-6">
+    <h1 class="mb-12 font-medium text-primary-800">Other Products</h1>
+    <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {# {% image eleventy.env.root + "/src/static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %} #}
+        {% for product in collections.products|head(3) %}
+            {% if product.data.name != name %}
+                <div class="group relative [&_img]:hover:scale-125 [&_img]:duration-500 overflow-hidden [&_*]:transition">
+                    <div class="overflow-hidden">
+                        {% image eleventy.env.root + product.data.thumbnail, product.data.name, "600px" %}
+                    </div>
+                    <h4 class="group-hover:underline mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
+                    <p class="font-fahkwang text-gray-600 mb-2 md:mb-4">{{ product.data.description }}</p>
+                    <a href="{{ product.url }}" class="font-fahkwang text-gray-600 group-hover:underline stretched-link"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>

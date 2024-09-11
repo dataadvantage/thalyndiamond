@@ -1192,6 +1192,10 @@ h4 {
   grid-column: span 4 / span 4;
 }
 
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1243,6 +1247,10 @@ h4 {
   margin-top: 2.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-2\.5 {
   margin-top: 0.625rem;
 }
@@ -1257,10 +1265,6 @@ h4 {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .block {
@@ -1299,6 +1303,10 @@ h4 {
   height: 1.75rem;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -1307,12 +1315,12 @@ h4 {
   height: 100%;
 }
 
-.h-\[400px\] {
-  height: 400px;
-}
-
 .max-h-0 {
   max-height: 0px;
+}
+
+.max-h-\[190px\] {
+  max-height: 190px;
 }
 
 .min-h-\[500px\] {
@@ -1368,6 +1376,10 @@ h4 {
   cursor: pointer;
 }
 
+.auto-cols-auto {
+  grid-auto-columns: auto;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1386,6 +1398,10 @@ h4 {
 
 .items-center {
   align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
 }
 
 .justify-end {
@@ -1672,12 +1688,12 @@ h4 {
   font-family: Fahkwang, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
 .font-prompt {
   font-family: Prompt, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .text-3xl {
@@ -1723,6 +1739,10 @@ h4 {
   font-weight: 200;
 }
 
+.font-light {
+  font-weight: 300;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1733,10 +1753,6 @@ h4 {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-light {
-  font-weight: 300;
 }
 
 .uppercase {
@@ -1755,20 +1771,8 @@ h4 {
   line-height: 2rem;
 }
 
-.leading-relaxed {
-  line-height: 1.625;
-}
-
 .tracking-tight {
   letter-spacing: -0.025em;
-}
-
-.-tracking-wide {
-  letter-spacing: -0.025em;
-}
-
-.-tracking-wider {
-  letter-spacing: -0.05em;
 }
 
 .tracking-wider {
@@ -1790,6 +1794,11 @@ h4 {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
@@ -1808,11 +1817,6 @@ h4 {
 .text-neutral-600 {
   --tw-text-opacity: 1;
   color: rgb(82 82 82 / var(--tw-text-opacity));
-}
-
-.text-neutral-700 {
-  --tw-text-opacity: 1;
-  color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
 .text-neutral-800 {
@@ -1838,15 +1842,6 @@ h4 {
 .text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(250 204 21 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .opacity-0 {
@@ -1981,6 +1976,11 @@ h4 {
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
+}
+
+.hover\:-translate-y-2:hover {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:text-gray-900:hover {
@@ -2162,6 +2162,11 @@ h4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .lg\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -2190,11 +2195,6 @@ h4 {
   .lg\:py-48 {
     padding-top: 12rem;
     padding-bottom: 12rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 
@@ -2241,12 +2241,6 @@ h4 {
   transition-duration: 500ms;
 }
 
-.\[\&_img\]\:hover\:scale-105:hover img {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .\[\&_img\]\:hover\:scale-125:hover img {
   --tw-scale-x: 1.25;
   --tw-scale-y: 1.25;
@@ -2261,6 +2255,15 @@ h4 {
 
 .\[\&_m\]\:rounded-full m {
   border-radius: 9999px;
+}
+
+.\[\&_picture\>img\]\:h-full picture>img {
+  height: 100%;
+}
+
+.\[\&_picture\>img\]\:object-cover picture>img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .\[\&_picture\]\:min-h-full picture {
