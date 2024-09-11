@@ -2,11 +2,15 @@
 permalink: /tags/
 layout: layouts/base.njk
 ---
-<h1>Tags</h1>
 
-<ul>
-{% for tag in collections.all | getAllTags | filterTagList %}
-	{% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
-{% endfor %}
-</ul>
+<div class="default-container py-24">
+    <h1 class="mb-8">Tags</h1>
+    <ul>
+        {% for tag in collections.all | getAllTags | filterTagList %}
+            {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+            <li>
+                <a href="{{ tagUrl }}" class="post-tag text-blue-600 hover:underline">{{ tag }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

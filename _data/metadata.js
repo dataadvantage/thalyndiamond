@@ -1,7 +1,7 @@
 module.exports = {
 	title: "Thalyn Diamond Chiang Mai",
 	description:
-		"งานเพชรแล็บเจ้าแรกของเชียงใหม่ พร้อมประสบการณ์ทำเพชรร่วม 50 ปี เพชรสวย ราคาถูก พร้อมประกัน จัดส่งฟรีทั่วประเทศ",
+		"Thalyn Diamond รับออกแบบ เครื่องประดับทุกชนิด ที่สะท้อนความเป็นคุณ",
 	url: "https://www.thalyndiamond.com",
 	language: "th",
 	author: {
