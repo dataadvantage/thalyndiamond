@@ -1,6 +1,5 @@
 ---
-    name: Jewelry name no 8
-    description: Description of jewelry no 8
-    price: "50,000"
-    thumbnail: /src/static/img/product-1.png
+    name: Ring 8
+    description: Description of jewelry
+    thumbnail: /src/static/img/ring-8.jpg
 ---

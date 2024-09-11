@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Our Products - Thalyn Diamond
+description: สินค้าเครื่องประดับที่สวยงามและมีคุณภาพ เพชรแท้จากแล็บ เจ้าแรกของเชียงใหม่
+permalink: '/products/'
+override:tags: []
+eleventyNavigation:
+  key: Products
+  order: 2
+---
+
+<div class="bg-parchment">
+    <div class="h-[400px] md:h-[600px] [&_picture]:min-h-full [&_img]:h-full [&_img]:md:w-full [&_img]:object-cover">
+        {% image eleventy.env.root + '/src/static/img/large-front-view-1.jpg', 'Thalyn Diamond storefront', '2000px', undefined, false %}
+    </div>
+    <div class="default-container py-24">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {% image eleventy.env.root + "/src/static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %}
+            {% for product in collections.products %}
+                <div class="group relative [&_img]:hover:scale-125 [&_img]:duration-500 overflow-hidden [&_*]:transition">
+                    <div class="overflow-hidden">
+                        {% image eleventy.env.root + product.data.thumbnail, product.data.name, "600px" %}
+                    </div>
+                    <h4 class="group-hover:underline mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
+                    <p class="font-fahkwang text-primary mb-2 md:mb-4">{{ product.data.description }}</p>
+                    <a href="{{ product.url }}" class="font-fahkwang text-gray-600 group-hover:underline stretched-link"></a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -28,7 +28,7 @@ numberOfLatestPostsToShow: 3
           คือ
           <span class="font-normal">“เพชรแท้”</span>
           ที่มีคุณสมบัติทาง กายภาพ และการเล่นของแสงเช่นเดียวกับ “เพชรธรรมชาติ”
-          โดยไม่สามารถแยกออกได้ด้วยตาเปล่า</p>
+                    โดยไม่สามารถแยกออกได้ด้วยตาเปล่า</p>
         <p class="text-white font-prompt font-extralight">
           เพชร Lab Grown นี้
           <span class="font-normal">“มนุษย์”</span>
@@ -44,14 +44,22 @@ numberOfLatestPostsToShow: 3
 <div class="bg-parchment px-6">
   <div class="default-container py-16">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {% image "static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %}
+      {% image eleventy.env.root + "/src/static/img/thalyn-red.png", "Thalyn Diamond brand logo", "400px" %}
       {% for product in collections.products|head(7) %}
-        <div>
-          {% image eleventy.env.root + product.data.thumbnail, product.data.name, "400px" %}
-          <h4 class="mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
+        <div class="group relative [&_img]:hover:scale-125 [&_img]:duration-500 overflow-hidden [&_*]:transition">
+          <div class="overflow-hidden">
+            {% image eleventy.env.root + product.data.thumbnail, product.data.name, "600px" %}
+          </div>
+          <h4 class="group-hover:underline mt-4 font-fahkwang md:text-xl font-semibold text-primary mb-2 md:mb-4">{{ product.data.name }}</h3>
           <p class="font-fahkwang text-primary mb-2 md:mb-4">{{ product.data.description }}</p>
+          <a href="{{ product.url }}" class="font-fahkwang text-gray-600 group-hover:underline stretched-link"></a>
         </div>
       {% endfor %}
+    </div>
+    <div class="mt-12">
+      <a class="transition text-primary hover:underline py-4 pr-4 font-prompt" href="/products/">
+        ชมสินค้าของเรา
+      </a>
     </div>
   </div>
 </div>
@@ -74,7 +82,7 @@ numberOfLatestPostsToShow: 3
           <span class="font-medium">"Thalyn Diamond" เพชรแท้ LabGrown
           </span>
           เจ้าแรก เจ้าเดียวในเชียงใหม่ ใหญ่ที่สุดในภาคเหนือ และเรายังมีสาขาที่ กรุงเทพ
-                    อีกด้วย
+                              อีกด้วย
         </p>
         <div class="absolute inset-0 [&_img]:h-full [&_img]:object-cover [&_img]:object-top">
           {% image 'static/img/store-black-and-white-2.png', "Thalyn Diamond storefront", "1000px" %}
@@ -85,7 +93,7 @@ numberOfLatestPostsToShow: 3
 </div>
 <div class="bg-white py-20 px-6 relative">
   <div class="default-container">
-    <h2 class="text-lg font-prompt font-normal">Testimonials</h2>
+    <h2 class="text-lg font-prompt font-normal">เครื่องประดับที่คุณไว้ใจ</h2>
     <p class="font-prompt font-semibold text-primary mb-8 text-4xl">รีวิวจากลูกค้าของเรา</p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 mb-12 gap-6">
       <div class="shadow bg-gray-100 p-6 relative z-50">
@@ -93,10 +101,10 @@ numberOfLatestPostsToShow: 3
           {% image './static/img/vathinee.png', 'Customer image', '40px' %}
           <div class="ml-4">
             <p class="font-bold">Vathinee B.</p>
-            <p class="text-gray-600">ลูกค้างานแหวนแต่งงาน custom made</p>
+            <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
           </div>
         </div>
-        <p class="mb-6 text-gray-600">
+        <p class="text-sm mb-6 text-gray-600">
           We had the most wonderful experience with Thalyn Diamond for our wedding rings. The service provided by the owners was
           exceptional—they were incredibly kind and professional throughout the entire process. They truly understood our vision
           and delivered rings that were absolutely beautiful and exactly what we wanted. The quality of the craftsmanship is
@@ -113,10 +121,10 @@ numberOfLatestPostsToShow: 3
           {% image './static/img/nattaporn.png', 'Customer image', '40px' %}
           <div class="ml-4">
             <p class="font-bold">Nattaporn S.</p>
-            <p class="text-gray-600">ลูกค้างานเครื่องประดับ</p>
+            <p class="text-sm text-gray-500">ลูกค้างานเครื่องประดับ</p>
           </div>
         </div>
-        <p class="mb-6 text-gray-600 font-prompt">
+        <p class="text-sm mb-6 text-gray-600 font-prompt">
           ร้านนี้มีคนแนะนำมา ตอนแรกยังลังเลเพราะเห็นเพิ่งเปิด แอบกลัว 555 แต่ราคาเค้าน่ารักมาก
           บวกกับกำลังหาแหวนที่ใส่ทุกวันแทนแหวนแต่งงานแบบไม่ต้องกังวลในการดูแลรักษามากนัก ก็เลยลองสั่งมาดู ผลคือ เพชรสวยมาก
           คุณภาพเกินราคา ตัวแหวนก็แข็งแรงสวยงาม สำคัญคือเจ้าของร้านบริการเองเลย ไม่ว่าจะให้คำแนะนำ หาแบบที่เข้ากับเรา
@@ -136,10 +144,10 @@ numberOfLatestPostsToShow: 3
           {% image './static/img/josh.png', 'Customer image', '40px' %}
           <div class="ml-4">
             <p class="font-bold">Josh B.</p>
-            <p class="text-gray-600">ลูกค้างานแหวนแต่งงาน custom made</p>
+            <p class="text-sm text-gray-500">ลูกค้างานแหวนแต่งงาน custom made</p>
           </div>
         </div>
-        <p class="mb-6 text-gray-600">
+        <p class="text-sm mb-6 text-gray-600">
           My wife and I had an exceptional experience with Thalyn Diamond in Chiang Mai. From start to finish, their service was
           impeccable. We wanted custom-made wedding rings, and they exceeded our expectations in every way. The craftsmanship is
           stunning, and the rings were exactly how we envisioned them.
@@ -155,7 +163,7 @@ numberOfLatestPostsToShow: 3
       <a
         class="transition text-primary hover:underline py-4 pr-4 font-prompt"
         href="https://www.google.com/maps/place/Thalyn+Diamond+%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3+Lab+Grown+%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88/@18.7597733,99.0176284,15z/data=!4m8!3m7!1s0x30da2f005b98c50f:0xf932ec321dd57ace!8m2!3d18.7597733!4d99.0176284!9m1!1b1!16s%2Fg%2F11vws7r9xx?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D">
-        ดูรีวิวทั้งหมด
+        อ่านรีวิวทั้งหมด
       </a>
     </div>
   </div>

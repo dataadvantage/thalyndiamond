@@ -1,4 +1,4 @@
 module.exports = {
 	tags: ["products"],
-	permalink: false,
+	permalink: "/products/{{ name | slug }}/",
 };
