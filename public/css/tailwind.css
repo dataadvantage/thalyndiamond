@@ -1323,10 +1323,6 @@ h4 {
   max-height: 0px;
 }
 
-.max-h-\[300px\] {
-  max-height: 300px;
-}
-
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -2221,11 +2217,6 @@ h4 {
   .lg\:py-48 {
     padding-top: 12rem;
     padding-bottom: 12rem;
-  }
-
-  .lg\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 }
 

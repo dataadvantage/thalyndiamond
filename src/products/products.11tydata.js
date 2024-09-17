@@ -1,5 +1,6 @@
 module.exports = {
 	tags: ["products"],
-	permalink: "/products/{{ name | slug }}/",
+	permalink:
+		"/products/{% if url %}{{ url }}{% else %}{{name|slug}}{% endif %}/",
 	layout: "layouts/product.njk",
 };
