@@ -1,7 +1,7 @@
 ---
     name: Eternity Round
     description: Description of jewelry no 1
-    thumbnail: /src/static/img/Eternity Round.jpg
+    thumbnail: /src/static/img/eternity-round-thumbnail.jpg
     images:
         - /src/static/img/eternity-round-1.jpg
         - /src/static/img/eternity-round-2.jpg

@@ -2,7 +2,7 @@
     name: Lovers' Fortitude
     url: lovers-fortitude
     description: Description of jewelry no 1
-    thumbnail: /src/static/img/lovers-fortitude.jpg
+    thumbnail: /src/static/img/lovers-fortitude-thumbnail.jpg
     images:
         - /src/static/img/lovers-fortitude-1.jpg
         - /src/static/img/lovers-fortitude-2.jpg
