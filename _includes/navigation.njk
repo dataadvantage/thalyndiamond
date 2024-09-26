@@ -7,13 +7,13 @@
       <div class="hidden sm:ml-6 sm:flex">
         {% for item in collections.all | eleventyNavigation %}
           <div class="relative flex px-4 py-10 group text-sm">
-            <a href="{{ item.url }}" class="after:duration-500 after:inset-0 overflow-x-hidden relative after:-translate-x-[105%] hover:after:translate-x-0 after:transition after:content-[''] after:absolute after:border-b-2 after:border-white inline-flex items-center px-1 font-medium {% if page.url == item.url %}text-white after:translate-x-0{% else %}text-neutral-400{% endif %} hover:text-white transition">{{ item.key | upper }}</a>
+            <a href="{{ item.url }}" class="after:duration-500 after:inset-0 overflow-x-hidden relative after:-translate-x-[105%] hover:after:translate-x-0 after:transition after:content-[''] after:absolute after:border-b-2 after:border-white inline-flex items-center px-1 font-medium {% if page.url == item.url %}text-white after:translate-x-0{% else %}text-neutral-300{% endif %} hover:text-white transition">{{ item.key | upper }}</a>
             {% if item.children | length > 0 %}
               <span class="text-primary-800 cursor-pointer pl-2">&#9660;</span>
               <div class="z-10 bg-white shadow overflow-y-hidden max-h-0 group-hover:max-h-none opacity-0 group-hover:opacity-100 px-4
                   absolute left-0 right-0 top-full transition-all">
                 {% for child in item.children %}
-                  <a href="{{ child.url }}" class="after:duration-500 after:inset-0 overflow-x-hidden relative after:-translate-x-[105%] hover:after:translate-x-0 after:transition after:content-[''] after:absolute after:border-b-2 after:border-white inline-block my-2 items-center px-1 font-medium {% if page.url == child.url %}text-white{% else %}text-neutral-400{% endif %} hover:text-white transition">{{ child.key | upper }}</a>
+                  <a href="{{ child.url }}" class="after:duration-500 after:inset-0 overflow-x-hidden relative after:-translate-x-[105%] hover:after:translate-x-0 after:transition after:content-[''] after:absolute after:border-b-2 after:border-white inline-block my-2 items-center px-1 font-medium {% if page.url == child.url %}text-white{% else %}text-neutral-300{% endif %} hover:text-white transition">{{ child.key | upper }}</a>
                 {% endfor %}
               </div>
             {% endif %}
@@ -69,7 +69,7 @@
       {% for item in collections.all | eleventyNavigation %}
         <div x-data="{subMenuOpen: false}">
           <div class="py-2 pl-3 pr-4 flex">
-            <a href="{{ item.url }}" class="flex-1 text-base font-medium {% if page.url == item.url %}text-white{% else %}text-neutral-400{% endif %} hover:text-white">
+            <a href="{{ item.url }}" class="flex-1 text-base font-medium {% if page.url == item.url %}text-white{% else %}text-neutral-300{% endif %} hover:text-white">
               {{ item.key | upper }}
             </a>
             {% if item.children | length > 0 %}
@@ -80,7 +80,7 @@
           {% if item.children | length > 0 %}
             <div class="pl-6 transition-all" x-show="subMenuOpen" x-cloak x-transition>
               {% for child in item.children %}
-                <a href="{{ child.url }}" class="block my-3 items-center px-1 font-medium {% if page.url == child.url %}text-white{% else %}text-neutral-400{% endif %} hover:text-white transition">{{ child.key | upper }}</a>
+                <a href="{{ child.url }}" class="block my-3 items-center px-1 font-medium {% if page.url == child.url %}text-white{% else %}text-neutral-300{% endif %} hover:text-white transition">{{ child.key | upper }}</a>
               {% endfor %}
             </div>
           {% endif %}
