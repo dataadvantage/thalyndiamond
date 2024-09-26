@@ -4,14 +4,23 @@
             <div class="col-span-2 md:col-span-1">
                 {% image eleventy.env.root + '/src/static/img/banner-logo.png', "Thalyn Diamond brand logo", "600px" %}
             </div>
-            <div class="md:hidden"></div>
             <div class="text-white font-fahkwang font-extralight col-span-4 md:col-span-2 lg:col-span-1">
                 <h3 class="text-lg font-medium mb-4">Contact us</h3>
                 <p>
                     Call: (+66) 99 639 6445<br/> Email:
                     <a href="mailto:{{ contacts.email }}">{{ contacts.email }}</a><br/> <br/> Address: <br/>Wasabi Park 2nd floor, Mahidol
-                        Road, Chiang Mai
+                                                Road, Chiang Mai
                 </p>
+            </div>
+            <div class="col-span-2 md:col-span-1">
+                <h3 class="font-fahkwang text-lg text-white mb-4">Quick links</h3>
+                <ul class="mb-6">
+                    {% for item in collections.all | eleventyNavigation %}
+                        <li class="mb-3">
+                            <a class="text-gray-200 hover:text-white text-sm" href="{{ item.url }}">{{ item.key }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="text-white font-fahkwang font-extralight col-span-4 md:col-span-1">
                 <h3 class="text-lg font-medium mb-4">Follow us</h3>
