@@ -1,5 +1,8 @@
 ---
 layout: layouts/base.njk
+eleventyComputed:
+    title: "{{ name }} - Thalyn Diamond"
+    facebook_image: "{% getImage eleventy.env.root + thumbnail, '900px' %}"
 ---
 
 <div class="default-container py-12 px-6">
