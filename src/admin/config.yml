@@ -14,7 +14,7 @@ public_folder: "/static/img"
 collections:
   - label: "Product"
     name: "product"
-    folder: "src/products"
+    folder: "src/content/products"
     create: true
     editor:
       preview: false
